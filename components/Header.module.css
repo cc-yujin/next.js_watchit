@@ -8,3 +8,7 @@
   align-items: center;
   padding: 26px 0;
 }
+
+:global(.light) .header {
+  border-color: #e1e1e1;
+}

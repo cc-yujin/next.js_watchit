@@ -17,7 +17,14 @@
   width: 100%;
   overflow: hidden;
 }
-
+.posterContainer {
+  display: block;
+  border-radius: 10px;
+  aspect-ratio: 27 / 40;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
 .title {
   margin: 2px 0;
   font-weight: 500;
@@ -27,6 +34,10 @@
 
 .date {
   color: #e1e1e1;
+}
+
+:global(.light) .date {
+  color: #1f1f1f;
 }
 
 .starRatingContainer {
@@ -40,4 +51,8 @@
   color: #e1e1e1;
   font-weight: 400;
   font-size: 16px;
+}
+
+:global(.light) .starRating {
+  color: #1f1f1f;
 }

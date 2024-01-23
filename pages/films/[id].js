@@ -5,6 +5,7 @@ import MovieReviewList from "@/components/MovieReviewList";
 import styles from "@/styles/Movie.module.css";
 import axios from "@/lib/axios";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const labels = {
   rating: {
@@ -45,7 +46,9 @@ export default function Movie() {
   return (
     <>
       <div className={styles.header}>
-        <img className={styles.poster} src={movie.posterUrl} alt={movie.name} />
+        <div className={styles.posterContainer}>
+          <Image fill src={movie.posterUrl} alt={movie.name} />
+        </div>
         <div className={styles.info}>
           <div className={styles.englishTitle}>{movie.englishTitle}</div>
           <h1 className={styles.title}>{movie.title}</h1>

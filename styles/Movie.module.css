@@ -13,6 +13,12 @@
   width: 350px;
 }
 
+.posterContainer {
+  aspect-ratio: 27 / 40;
+  width: 350px;
+  position: relative;
+}
+
 .info {
   display: flex;
   flex-direction: column;
@@ -26,6 +32,10 @@
   font-weight: 300;
   font-size: 14px;
   line-height: 20px;
+}
+
+:global(.light) .englishTitle {
+  color: #505050;
 }
 
 .title {
@@ -45,6 +55,10 @@
   font-weight: 400;
   font-size: 18px;
   text-align: left;
+}
+
+:global(.light) .infoTable th {
+  color: #505050;
 }
 
 .starRating {
@@ -72,6 +86,10 @@
   text-decoration: underline;
 }
 
+:global(.light) .readMore {
+  color: #505050;
+}
+
 .reviewSections {
   display: flex;
   gap: 20px;
@@ -95,6 +113,10 @@
   border-radius: 10px;
   background: #1f1f1f;
   padding: 25px;
+}
+
+:global(.light) .reviewForm {
+  background-color: #f9f9f9;
 }
 
 .dropdown {

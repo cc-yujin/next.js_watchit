@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Container from "@/components/Container";
 import axios from "@/lib/axios";
 import { useEffect, useState } from "react";
+import Head from "next/head";
 
 export default function Home() {
   const [movies, setMovies] = useState([]);
@@ -21,6 +22,9 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>Watchit</title>
+      </Head>
       <SearchForm />
       <MovieList className={styles.movieList} movies={movies} />
     </>

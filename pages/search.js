@@ -4,6 +4,7 @@ import SearchForm from "@/components/SearchForm";
 import styles from "@/styles/Search.module.css";
 import axios from "@/lib/axios";
 import { useEffect, useState } from "react";
+import Head from "next/head";
 
 export default function Search() {
   const [movies, setMovies] = useState([]);
@@ -22,6 +23,9 @@ export default function Search() {
 
   return (
     <>
+      <Head>
+        <title>{q} 검색 결과 - Watchit</title>
+      </Head>
       <SearchForm initialValue={q} />
       <h2 className={styles.title}>
         <span className={styles.keyword}>{q}</span> 검색 결과
